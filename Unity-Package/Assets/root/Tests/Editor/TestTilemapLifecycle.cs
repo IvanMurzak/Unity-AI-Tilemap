@@ -52,7 +52,7 @@ namespace com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests
 
             var tilemapGo = GameObject.Find(GO_TilemapName);
             Assert.IsNotNull(tilemapGo, "Tilemap GameObject should exist in the scene");
-            Assert.IsNotNull(tilemapGo!.GetComponent<Tilemap>(), "Tilemap component should be present");
+            Assert.IsNotNull(tilemapGo!.GetComponent<UnityEngine.Tilemaps.Tilemap>(), "Tilemap component should be present");
             Assert.IsNotNull(tilemapGo.GetComponent<TilemapRenderer>(), "TilemapRenderer component should be present");
 
             yield return null;

@@ -73,8 +73,15 @@ namespace com.IvanMurzak.Unity.MCP.Editor.API
                 var hiX = Mathf.Max(minX, maxX);
                 var hiY = Mathf.Max(minY, maxY);
 
+                // Use Tilemap.BoxFill to seed the region, then deterministically set each cell
+                // (inclusive of both corners) so the result is identical across Unity versions —
+                // Tilemap.BoxFill's brush-pivot semantics vary and can leave edge cells unset.
                 var start = new Vector3Int(loX, loY, z);
                 tilemap.BoxFill(start, tile, loX, loY, hiX, hiY);
+                for (int cx = loX; cx <= hiX; cx++)
+                    for (int cy = loY; cy <= hiY; cy++)
+                        tilemap.SetTile(new Vector3Int(cx, cy, z), tile);
+
                 MarkDirtyAndRepaint(tilemap, tilemap.gameObject.scene);
 
                 var filled = (hiX - loX + 1) * (hiY - loY + 1);

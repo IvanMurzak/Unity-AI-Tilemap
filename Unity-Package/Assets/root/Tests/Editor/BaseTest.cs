@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Text.Json;
 using com.IvanMurzak.McpPlugin.Common.Model;
+using com.IvanMurzak.ReflectorNet;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -48,7 +49,7 @@ namespace com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests
         }
 
         /// <summary>Create a Grid GameObject with a child Tilemap + TilemapRenderer in the active scene.</summary>
-        protected static (GameObject grid, GameObject tilemapGo, Tilemap tilemap) CreateGridWithTilemap(
+        protected static (GameObject grid, GameObject tilemapGo, UnityEngine.Tilemaps.Tilemap tilemap) CreateGridWithTilemap(
             string gridName = "TestGrid", string tilemapName = "TestTilemap")
         {
             var gridGo = new GameObject(gridName);
@@ -56,7 +57,7 @@ namespace com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests
 
             var tilemapGo = new GameObject(tilemapName);
             tilemapGo.transform.SetParent(gridGo.transform, false);
-            var tilemap = tilemapGo.AddComponent<Tilemap>();
+            var tilemap = tilemapGo.AddComponent<UnityEngine.Tilemaps.Tilemap>();
             tilemapGo.AddComponent<TilemapRenderer>();
 
             return (gridGo, tilemapGo, tilemap);
