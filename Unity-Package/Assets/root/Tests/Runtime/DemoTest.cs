@@ -1,9 +1,9 @@
 /*
 ┌──────────────────────────────────────────────────────────────────┐
 │  Author: Ivan Murzak (https://github.com/IvanMurzak)             │
-│  Repository: GitHub (https://github.com/IvanMurzak/Unity-MCP)    │
+│  Repository: GitHub (https://github.com/IvanMurzak/Unity-AI-Tilemap) │
 │  Copyright (c) 2025 Ivan Murzak                                  │
-│  Licensed under the Apache License, Version 2.0.                 │
+│  Licensed under the MIT License.                                 │
 │  See the LICENSE file in the project root for more information.  │
 └──────────────────────────────────────────────────────────────────┘
 */
@@ -18,26 +18,10 @@ namespace com.IvanMurzak.Unity.MCP.Tilemap.Runtime.Tests
 {
     public partial class DemoTest
     {
-        [UnitySetUp]
-        public IEnumerator SetUp()
-        {
-            Debug.Log($"[{nameof(DemoTest)}] SetUp");
-            yield return null;
-        }
-        [UnityTearDown]
-        public IEnumerator TearDown()
-        {
-            Debug.Log($"[{nameof(DemoTest)}] TearDown");
-            yield return null;
-        }
-
         [UnityTest]
         public IEnumerator Always_Valid_Test()
         {
-            Debug.Log($"[{nameof(DemoTest)}] Test Log Message ABC");
-            Debug.Log($"[{nameof(DemoTest)}] Test Log Message ABC 123");
-
-            Assert.IsTrue(true, "This test is a placeholder and should be replaced with actual test logic.");
+            Assert.IsTrue(true, "Runtime placeholder test.");
             yield return null;
         }
     }
