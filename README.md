@@ -13,6 +13,8 @@
 
 </div>
 
+<img width="100%" alt="Tilemap" src="https://github.com/IvanMurzak/Unity-AI-Tilemap/raw/main/docs/promo/promo-tilemap.gif"/>
+
 AI-powered tools for the Unity [Tilemap](https://docs.unity3d.com/Manual/class-Tilemap.html) workflow. Create `Grid` + `Tilemap` GameObjects, paint and clear tiles, box-fill regions, read individual tiles, create `Tile` and `RuleTile` assets, set per-cell collider type, color, and transform, configure tilemap orientation and anchor, list / get tilemap components, and modify any tilemap component field directly through natural language commands — no manual tile-palette painting. Wraps Unity's built-in **Tilemap** module (`com.unity.modules.tilemap`) plus the **2D Tilemap Extras** package (`com.unity.2d.tilemap.extras`) for RuleTiles. Ideal for rapidly building 2D levels, prototyping grid layouts, and procedural tilemap generation. Built on top of the [AI Game Developer](https://github.com/IvanMurzak/Unity-MCP) platform.
 
 ### How to use
