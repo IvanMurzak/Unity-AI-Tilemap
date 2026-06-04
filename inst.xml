@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="25" result="Passed" total="25" passed="25" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-06-04 05:04:59Z" end-time="2026-06-04 05:05:04Z" duration="4.6606085">
+  <test-suite type="TestSuite" id="1038" name="Installer" fullname="Installer" runstate="Runnable" testcasecount="25" result="Passed" start-time="2026-06-04 05:04:59Z" end-time="2026-06-04 05:05:04Z" duration="4.660609" total="25" passed="25" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <test-suite type="Assembly" id="1067" name="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.dll" fullname="C:/Projects/Unity-AI-Tilemap/Installer/Library/ScriptAssemblies/com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.dll" runstate="Runnable" testcasecount="25" result="Passed" start-time="2026-06-04 05:04:59Z" end-time="2026-06-04 05:05:04Z" duration="4.645015" total="25" passed="25" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="89424" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+      </properties>
+      <test-suite type="TestSuite" id="1068" name="com" fullname="com" runstate="Runnable" testcasecount="25" result="Passed" start-time="2026-06-04 05:04:59Z" end-time="2026-06-04 05:05:04Z" duration="4.644499" total="25" passed="25" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1069" name="IvanMurzak" fullname="com.IvanMurzak" runstate="Runnable" testcasecount="25" result="Passed" start-time="2026-06-04 05:04:59Z" end-time="2026-06-04 05:05:04Z" duration="4.644377" total="25" passed="25" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1070" name="Unity" fullname="com.IvanMurzak.Unity" runstate="Runnable" testcasecount="25" result="Passed" start-time="2026-06-04 05:04:59Z" end-time="2026-06-04 05:05:04Z" duration="4.644305" total="25" passed="25" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1071" name="MCP" fullname="com.IvanMurzak.Unity.MCP" runstate="Runnable" testcasecount="25" result="Passed" start-time="2026-06-04 05:04:59Z" end-time="2026-06-04 05:05:04Z" duration="4.644254" total="25" passed="25" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestSuite" id="1072" name="Tilemap" fullname="com.IvanMurzak.Unity.MCP.Tilemap" runstate="Runnable" testcasecount="25" result="Passed" start-time="2026-06-04 05:04:59Z" end-time="2026-06-04 05:05:04Z" duration="4.644200" total="25" passed="25" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-suite type="TestSuite" id="1073" name="Installer" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer" runstate="Runnable" testcasecount="25" result="Passed" start-time="2026-06-04 05:04:59Z" end-time="2026-06-04 05:05:04Z" duration="4.644145" total="25" passed="25" failed="0" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <test-suite type="TestSuite" id="1074" name="Tests" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests" runstate="Runnable" testcasecount="25" result="Passed" start-time="2026-06-04 05:04:59Z" end-time="2026-06-04 05:05:04Z" duration="4.644011" total="25" passed="25" failed="0" inconclusive="0" skipped="0" asserts="0">
+                    <properties />
+                    <test-suite type="TestFixture" id="1039" name="ManifestInstallerTests" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.ManifestInstallerTests" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.ManifestInstallerTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-06-04 05:04:59Z" end-time="2026-06-04 05:05:03Z" duration="3.672235" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+                      <properties />
+                      <test-case id="1040" name="All" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.ManifestInstallerTests.All" methodname="All" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.ManifestInstallerTests" runstate="Runnable" seed="644686897" result="Passed" start-time="2026-06-04 05:04:59Z" end-time="2026-06-04 05:05:03Z" duration="3.655946" asserts="0">
+                        <properties />
+                        <output><![CDATA[[ManifestInstallerTests] SetUp
+Found JSON file: Assets/com.IvanMurzak/AI Tilemap Installer/Tests/Files\scopedregistries_empty_1.json
+[Installer] Failed to query OpenUPM, using hardcoded version 1.0.0: One or more errors occurred. (404 (Not Found))
+Found JSON file: Assets/com.IvanMurzak/AI Tilemap Installer/Tests/Files\scopedregistries_empty_2.json
+[Installer] Failed to query OpenUPM, using hardcoded version 1.0.0: One or more errors occurred. (404 (Not Found))
+Found JSON file: Assets/com.IvanMurzak/AI Tilemap Installer/Tests/Files\scopedregistries_gone.json
+[Installer] Failed to query OpenUPM, using hardcoded version 1.0.0: One or more errors occurred. (404 (Not Found))
+Found JSON file: Assets/com.IvanMurzak/AI Tilemap Installer/Tests/Files\scopes_empty.json
+[Installer] Failed to query OpenUPM, using hardcoded version 1.0.0: One or more errors occurred. (404 (Not Found))
+Found JSON file: Assets/com.IvanMurzak/AI Tilemap Installer/Tests/Files\scopes_gone.json
+[Installer] Failed to query OpenUPM, using hardcoded version 1.0.0: One or more errors occurred. (404 (Not Found))
+Found JSON file: Assets/com.IvanMurzak/AI Tilemap Installer/Tests/Files\scopes_partial_1.json
+[Installer] Failed to query OpenUPM, using hardcoded version 1.0.0: One or more errors occurred. (404 (Not Found))
+Found JSON file: Assets/com.IvanMurzak/AI Tilemap Installer/Tests/Files\scopes_partial_2.json
+[Installer] Failed to query OpenUPM, using hardcoded version 1.0.0: One or more errors occurred. (404 (Not Found))
+Found JSON file: Assets/com.IvanMurzak/AI Tilemap Installer/Tests/Files\scopes_partial_3.json
+[Installer] Failed to query OpenUPM, using hardcoded version 1.0.0: One or more errors occurred. (404 (Not Found))
+Found JSON file: Assets/com.IvanMurzak/AI Tilemap Installer/Tests/Files\scopes_partial_4.json
+[Installer] Failed to query OpenUPM, using hardcoded version 1.0.0: One or more errors occurred. (404 (Not Found))
+Found JSON file: Assets/com.IvanMurzak/AI Tilemap Installer/Tests/Files\scopes_partial_5.json
+[Installer] Failed to query OpenUPM, using hardcoded version 1.0.0: One or more errors occurred. (404 (Not Found))
+[ManifestInstallerTests] TearDown
+]]></output>
+                      </test-case>
+                    </test-suite>
+                    <test-suite type="TestFixture" id="1041" name="OpenUpmVersionTests" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-06-04 05:05:03Z" end-time="2026-06-04 05:05:03Z" duration="0.005596" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+                      <properties />
+                      <test-case id="1048" name="ParseBestVersion_EmptyStringInput_ReturnsNull" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests.ParseBestVersion_EmptyStringInput_ReturnsNull" methodname="ParseBestVersion_EmptyStringInput_ReturnsNull" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests" runstate="Runnable" seed="142956930" result="Passed" start-time="2026-06-04 05:05:03Z" end-time="2026-06-04 05:05:03Z" duration="0.000928" asserts="0">
+                        <properties />
+                      </test-case>
+                      <test-case id="1046" name="ParseBestVersion_EmptyVersions_ReturnsNull" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests.ParseBestVersion_EmptyVersions_ReturnsNull" methodname="ParseBestVersion_EmptyVersions_ReturnsNull" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests" runstate="Runnable" seed="2060091976" result="Passed" start-time="2026-06-04 05:05:03Z" end-time="2026-06-04 05:05:03Z" duration="0.000186" asserts="0">
+                        <properties />
+                      </test-case>
+                      <test-case id="1042" name="ParseBestVersion_ExactVersionExists_ReturnsIt" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests.ParseBestVersion_ExactVersionExists_ReturnsIt" methodname="ParseBestVersion_ExactVersionExists_ReturnsIt" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests" runstate="Runnable" seed="65286029" result="Passed" start-time="2026-06-04 05:05:03Z" end-time="2026-06-04 05:05:03Z" duration="0.000140" asserts="0">
+                        <properties />
+                      </test-case>
+                      <test-case id="1043" name="ParseBestVersion_ExactVersionMissing_ReturnsHighestBelow" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests.ParseBestVersion_ExactVersionMissing_ReturnsHighestBelow" methodname="ParseBestVersion_ExactVersionMissing_ReturnsHighestBelow" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests" runstate="Runnable" seed="1328949706" result="Passed" start-time="2026-06-04 05:05:03Z" end-time="2026-06-04 05:05:03Z" duration="0.000082" asserts="0">
+                        <properties />
+                      </test-case>
+                      <test-case id="1045" name="ParseBestVersion_MalformedJson_ReturnsNull" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests.ParseBestVersion_MalformedJson_ReturnsNull" methodname="ParseBestVersion_MalformedJson_ReturnsNull" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests" runstate="Runnable" seed="636455334" result="Passed" start-time="2026-06-04 05:05:03Z" end-time="2026-06-04 05:05:03Z" duration="0.000058" asserts="0">
+                        <properties />
+                      </test-case>
+                      <test-case id="1049" name="ParseBestVersion_NoVersionsKey_ReturnsNull" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests.ParseBestVersion_NoVersionsKey_ReturnsNull" methodname="ParseBestVersion_NoVersionsKey_ReturnsNull" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests" runstate="Runnable" seed="270251582" result="Passed" start-time="2026-06-04 05:05:03Z" end-time="2026-06-04 05:05:03Z" duration="0.000052" asserts="0">
+                        <properties />
+                      </test-case>
+                      <test-case id="1047" name="ParseBestVersion_NullInput_ReturnsNull" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests.ParseBestVersion_NullInput_ReturnsNull" methodname="ParseBestVersion_NullInput_ReturnsNull" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests" runstate="Runnable" seed="901997923" result="Passed" start-time="2026-06-04 05:05:03Z" end-time="2026-06-04 05:05:03Z" duration="0.000068" asserts="0">
+                        <properties />
+                      </test-case>
+                      <test-case id="1044" name="ParseBestVersion_OnlyNewerVersionsExist_ReturnsNull" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests.ParseBestVersion_OnlyNewerVersionsExist_ReturnsNull" methodname="ParseBestVersion_OnlyNewerVersionsExist_ReturnsNull" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests" runstate="Runnable" seed="781724931" result="Passed" start-time="2026-06-04 05:05:03Z" end-time="2026-06-04 05:05:03Z" duration="0.000069" asserts="0">
+                        <properties />
+                      </test-case>
+                      <test-case id="1051" name="ParseBestVersion_SelectsCorrectVersionAmongMany" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests.ParseBestVersion_SelectsCorrectVersionAmongMany" methodname="ParseBestVersion_SelectsCorrectVersionAmongMany" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests" runstate="Runnable" seed="799395657" result="Passed" start-time="2026-06-04 05:05:03Z" end-time="2026-06-04 05:05:03Z" duration="0.000065" asserts="0">
+                        <properties />
+                      </test-case>
+                      <test-case id="1050" name="ParseBestVersion_SkipsInvalidVersionStrings" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests.ParseBestVersion_SkipsInvalidVersionStrings" methodname="ParseBestVersion_SkipsInvalidVersionStrings" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.OpenUpmVersionTests" runstate="Runnable" seed="1155761695" result="Passed" start-time="2026-06-04 05:05:03Z" end-time="2026-06-04 05:05:03Z" duration="0.000082" asserts="0">
+                        <properties />
+                      </test-case>
+                    </test-suite>
+                    <test-suite type="TestFixture" id="1052" name="VersionComparisonTests" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests" runstate="Runnable" testcasecount="14" result="Passed" start-time="2026-06-04 05:05:03Z" end-time="2026-06-04 05:05:04Z" duration="0.964747" total="14" passed="14" failed="0" inconclusive="0" skipped="0" asserts="0">
+                      <properties />
+                      <test-case id="1063" name="AddScopedRegistryIfNeeded_AllowVersionUpgrade_Integration" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests.AddScopedRegistryIfNeeded_AllowVersionUpgrade_Integration" methodname="AddScopedRegistryIfNeeded_AllowVersionUpgrade_Integration" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests" runstate="Runnable" seed="189756455" result="Passed" start-time="2026-06-04 05:05:03Z" end-time="2026-06-04 05:05:03Z" duration="0.327638" asserts="0">
+                        <properties />
+                        <output><![CDATA[[Installer] Failed to query OpenUPM, using hardcoded version 1.0.0: One or more errors occurred. (404 (Not Found))
+]]></output>
+                      </test-case>
+                      <test-case id="1064" name="AddScopedRegistryIfNeeded_AllowVersionUpgrade_WritesResolvedVersion" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests.AddScopedRegistryIfNeeded_AllowVersionUpgrade_WritesResolvedVersion" methodname="AddScopedRegistryIfNeeded_AllowVersionUpgrade_WritesResolvedVersion" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests" runstate="Runnable" seed="2104396905" result="Passed" start-time="2026-06-04 05:05:03Z" end-time="2026-06-04 05:05:03Z" duration="0.010301" asserts="0">
+                        <properties />
+                      </test-case>
+                      <test-case id="1066" name="AddScopedRegistryIfNeeded_NoExistingDependency_Integration" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests.AddScopedRegistryIfNeeded_NoExistingDependency_Integration" methodname="AddScopedRegistryIfNeeded_NoExistingDependency_Integration" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests" runstate="Runnable" seed="860623567" result="Passed" start-time="2026-06-04 05:05:03Z" end-time="2026-06-04 05:05:04Z" duration="0.309099" asserts="0">
+                        <properties />
+                        <output><![CDATA[[Installer] Failed to query OpenUPM, using hardcoded version 1.0.0: One or more errors occurred. (404 (Not Found))
+]]></output>
+                      </test-case>
+                      <test-case id="1065" name="AddScopedRegistryIfNeeded_NoExistingDependency_WritesResolvedVersion" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests.AddScopedRegistryIfNeeded_NoExistingDependency_WritesResolvedVersion" methodname="AddScopedRegistryIfNeeded_NoExistingDependency_WritesResolvedVersion" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests" runstate="Runnable" seed="1170625652" result="Passed" start-time="2026-06-04 05:05:04Z" end-time="2026-06-04 05:05:04Z" duration="0.003712" asserts="0">
+                        <properties />
+                      </test-case>
+                      <test-case id="1062" name="AddScopedRegistryIfNeeded_PreventVersionDowngrade_Integration" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests.AddScopedRegistryIfNeeded_PreventVersionDowngrade_Integration" methodname="AddScopedRegistryIfNeeded_PreventVersionDowngrade_Integration" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests" runstate="Runnable" seed="820498968" result="Passed" start-time="2026-06-04 05:05:04Z" end-time="2026-06-04 05:05:04Z" duration="0.308010" asserts="0">
+                        <properties />
+                        <output><![CDATA[[Installer] Failed to query OpenUPM, using hardcoded version 1.0.0: One or more errors occurred. (404 (Not Found))
+]]></output>
+                      </test-case>
+                      <test-case id="1060" name="ShouldUpdateVersion_EmptyCurrentVersion_ReturnsTrue" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests.ShouldUpdateVersion_EmptyCurrentVersion_ReturnsTrue" methodname="ShouldUpdateVersion_EmptyCurrentVersion_ReturnsTrue" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests" runstate="Runnable" seed="511837260" result="Passed" start-time="2026-06-04 05:05:04Z" end-time="2026-06-04 05:05:04Z" duration="0.001185" asserts="0">
+                        <properties />
+                      </test-case>
+                      <test-case id="1057" name="ShouldUpdateVersion_MajorVersionHigher_ReturnsTrue" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests.ShouldUpdateVersion_MajorVersionHigher_ReturnsTrue" methodname="ShouldUpdateVersion_MajorVersionHigher_ReturnsTrue" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests" runstate="Runnable" seed="324276017" result="Passed" start-time="2026-06-04 05:05:04Z" end-time="2026-06-04 05:05:04Z" duration="0.000483" asserts="0">
+                        <properties />
+                      </test-case>
+                      <test-case id="1058" name="ShouldUpdateVersion_MajorVersionLower_ReturnsFalse" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests.ShouldUpdateVersion_MajorVersionLower_ReturnsFalse" methodname="ShouldUpdateVersion_MajorVersionLower_ReturnsFalse" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests" runstate="Runnable" seed="1637580931" result="Passed" start-time="2026-06-04 05:05:04Z" end-time="2026-06-04 05:05:04Z" duration="0.000465" asserts="0">
+                        <properties />
+                      </test-case>
+                      <test-case id="1055" name="ShouldUpdateVersion_MinorVersionHigher_ReturnsTrue" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests.ShouldUpdateVersion_MinorVersionHigher_ReturnsTrue" methodname="ShouldUpdateVersion_MinorVersionHigher_ReturnsTrue" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests" runstate="Runnable" seed="1185869396" result="Passed" start-time="2026-06-04 05:05:04Z" end-time="2026-06-04 05:05:04Z" duration="0.000305" asserts="0">
+                        <properties />
+                      </test-case>
+                      <test-case id="1056" name="ShouldUpdateVersion_MinorVersionLower_ReturnsFalse" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests.ShouldUpdateVersion_MinorVersionLower_ReturnsFalse" methodname="ShouldUpdateVersion_MinorVersionLower_ReturnsFalse" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests" runstate="Runnable" seed="775760190" result="Passed" start-time="2026-06-04 05:05:04Z" end-time="2026-06-04 05:05:04Z" duration="0.000242" asserts="0">
+                        <properties />
+                      </test-case>
+                      <test-case id="1061" name="ShouldUpdateVersion_NullCurrentVersion_ReturnsTrue" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests.ShouldUpdateVersion_NullCurrentVersion_ReturnsTrue" methodname="ShouldUpdateVersion_NullCurrentVersion_ReturnsTrue" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests" runstate="Runnable" seed="532023761" result="Passed" start-time="2026-06-04 05:05:04Z" end-time="2026-06-04 05:05:04Z" duration="0.000236" asserts="0">
+                        <properties />
+                      </test-case>
+                      <test-case id="1053" name="ShouldUpdateVersion_PatchVersionHigher_ReturnsTrue" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests.ShouldUpdateVersion_PatchVersionHigher_ReturnsTrue" methodname="ShouldUpdateVersion_PatchVersionHigher_ReturnsTrue" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests" runstate="Runnable" seed="423892172" result="Passed" start-time="2026-06-04 05:05:04Z" end-time="2026-06-04 05:05:04Z" duration="0.000306" asserts="0">
+                        <properties />
+                      </test-case>
+                      <test-case id="1054" name="ShouldUpdateVersion_PatchVersionLower_ReturnsFalse" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests.ShouldUpdateVersion_PatchVersionLower_ReturnsFalse" methodname="ShouldUpdateVersion_PatchVersionLower_ReturnsFalse" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests" runstate="Runnable" seed="1587187395" result="Passed" start-time="2026-06-04 05:05:04Z" end-time="2026-06-04 05:05:04Z" duration="0.000175" asserts="0">
+                        <properties />
+                      </test-case>
+                      <test-case id="1059" name="ShouldUpdateVersion_SameVersion_ReturnsFalse" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests.ShouldUpdateVersion_SameVersion_ReturnsFalse" methodname="ShouldUpdateVersion_SameVersion_ReturnsFalse" classname="com.IvanMurzak.Unity.MCP.Tilemap.Installer.Tests.VersionComparisonTests" runstate="Runnable" seed="1352276270" result="Passed" start-time="2026-06-04 05:05:04Z" end-time="2026-06-04 05:05:04Z" duration="0.000159" asserts="0">
+                        <properties />
+                      </test-case>
+                    </test-suite>
+                  </test-suite>
+                </test-suite>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

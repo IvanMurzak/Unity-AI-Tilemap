@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-06-04 05:06:31Z" end-time="2026-06-04 05:06:31Z" duration="0.0261979">
+  <test-suite type="TestSuite" id="1012" name="Unity-Package" fullname="Unity-Package" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-06-04 05:06:31Z" end-time="2026-06-04 05:06:31Z" duration="0.026198" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <test-suite type="Assembly" id="1015" name="com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests.dll" fullname="C:/Projects/Unity-AI-Tilemap/Unity-Package/Library/ScriptAssemblies/com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests.dll" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-06-04 05:06:31Z" end-time="2026-06-04 05:06:31Z" duration="0.016385" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="62068" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+      </properties>
+      <test-suite type="TestSuite" id="1016" name="com" fullname="com" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-06-04 05:06:31Z" end-time="2026-06-04 05:06:31Z" duration="0.016040" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1017" name="IvanMurzak" fullname="com.IvanMurzak" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-06-04 05:06:31Z" end-time="2026-06-04 05:06:31Z" duration="0.015984" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1018" name="Unity" fullname="com.IvanMurzak.Unity" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-06-04 05:06:31Z" end-time="2026-06-04 05:06:31Z" duration="0.015945" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1019" name="MCP" fullname="com.IvanMurzak.Unity.MCP" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-06-04 05:06:31Z" end-time="2026-06-04 05:06:31Z" duration="0.015910" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestSuite" id="1020" name="Tilemap" fullname="com.IvanMurzak.Unity.MCP.Tilemap" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-06-04 05:06:31Z" end-time="2026-06-04 05:06:31Z" duration="0.015871" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-suite type="TestSuite" id="1021" name="Editor" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Editor" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-06-04 05:06:31Z" end-time="2026-06-04 05:06:31Z" duration="0.015828" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <test-suite type="TestSuite" id="1022" name="Tests" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-06-04 05:06:31Z" end-time="2026-06-04 05:06:31Z" duration="0.015758" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+                    <properties />
+                    <test-suite type="TestFixture" id="1013" name="DemoTest" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests.DemoTest" classname="com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests.DemoTest" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-06-04 05:06:31Z" end-time="2026-06-04 05:06:31Z" duration="0.015019" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+                      <properties />
+                      <test-case id="1014" name="Always_Valid_Test" fullname="com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests.DemoTest.Always_Valid_Test" methodname="Always_Valid_Test" classname="com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests.DemoTest" runstate="Runnable" seed="882879833" result="Passed" start-time="2026-06-04 05:06:31Z" end-time="2026-06-04 05:06:31Z" duration="0.008071" asserts="0">
+                        <properties>
+                          <property name="_JOINTYPE" value="UnityCombinatorial" />
+                        </properties>
+                        <output><![CDATA[[DemoTest] SetUp
+[DemoTest] Test Log Message ABC
+[DemoTest] Test Log Message ABC 123
+[DemoTest] TearDown
+]]></output>
+                      </test-case>
+                    </test-suite>
+                  </test-suite>
+                </test-suite>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
