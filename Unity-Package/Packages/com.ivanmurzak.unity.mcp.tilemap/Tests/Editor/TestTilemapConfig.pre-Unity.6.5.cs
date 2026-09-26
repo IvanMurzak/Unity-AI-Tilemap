@@ -6,7 +6,7 @@
 */
 
 #nullable enable
-#if UNITY_6000_5_OR_NEWER
+#if !UNITY_6000_5_OR_NEWER
 using System.Collections;
 using AIGD;
 using com.IvanMurzak.Unity.MCP.Editor.API;
@@ -39,7 +39,7 @@ namespace com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests
             var (_, tilemapGo, _) = CreateGridWithTilemap();
 
             var json = $@"{{
-                ""gameObjectRef"": {{ ""instanceID"": {tilemapGo.GetEntityId()} }},
+                ""gameObjectRef"": {{ ""instanceID"": {tilemapGo.GetInstanceID()} }},
                 ""orientation"": ""XY""
             }}";
 
