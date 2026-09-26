@@ -6,7 +6,7 @@
 */
 
 #nullable enable
-#if UNITY_6000_5_OR_NEWER
+#if !UNITY_6000_5_OR_NEWER
 using System.Collections;
 using AIGD;
 using com.IvanMurzak.Unity.MCP.Editor.API;
@@ -67,13 +67,13 @@ namespace com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests
 
             var tool = new Tool_Tilemap();
             var setResult = tool.SetTile(
-                gameObjectRef: new GameObjectRef(tilemapGo.GetEntityId()),
+                gameObjectRef: new GameObjectRef(tilemapGo.GetInstanceID()),
                 x: 2, y: 3, z: 0,
                 tileAssetPath: TestTileAssetPath);
             Assert.IsTrue(setResult.success, "SetTile should succeed");
             Assert.IsFalse(setResult.erased, "A tile was painted, not erased");
 
-            var getResult = tool.GetTile(new GameObjectRef(tilemapGo.GetEntityId()), x: 2, y: 3, z: 0);
+            var getResult = tool.GetTile(new GameObjectRef(tilemapGo.GetInstanceID()), x: 2, y: 3, z: 0);
             Assert.IsTrue(getResult.hasTile, "Cell (2,3) should now have a tile");
             Assert.AreEqual(TestTileAssetPath, getResult.tileAssetPath, "Tile asset path should round-trip");
 
@@ -88,7 +88,7 @@ namespace com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests
 
             var tool = new Tool_Tilemap();
             var result = tool.BoxFill(
-                gameObjectRef: new GameObjectRef(tilemapGo.GetEntityId()),
+                gameObjectRef: new GameObjectRef(tilemapGo.GetInstanceID()),
                 tileAssetPath: TestTileAssetPath,
                 minX: 0, minY: 0, maxX: 2, maxY: 1, z: 0);
 
@@ -106,10 +106,10 @@ namespace com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests
             CreateTileAssetOnDisk();
 
             var tool = new Tool_Tilemap();
-            tool.BoxFill(new GameObjectRef(tilemapGo.GetEntityId()), TestTileAssetPath, 0, 0, 3, 3, 0);
+            tool.BoxFill(new GameObjectRef(tilemapGo.GetInstanceID()), TestTileAssetPath, 0, 0, 3, 3, 0);
             Assert.Greater(tilemap.GetUsedTilesCount(), 0, "Tilemap should have tiles before clear");
 
-            var clearResult = tool.Clear(new GameObjectRef(tilemapGo.GetEntityId()), clearAll: true);
+            var clearResult = tool.Clear(new GameObjectRef(tilemapGo.GetInstanceID()), clearAll: true);
             Assert.IsTrue(clearResult.success, "Clear should succeed");
             Assert.AreEqual(0, tilemap.GetUsedTilesCount(), "Tilemap should be empty after ClearAll");
 
@@ -138,15 +138,15 @@ namespace com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests
             var tool = new Tool_Tilemap();
 
             var orientResult = tool.SetOrientation(
-                new GameObjectRef(tilemapGo.GetEntityId()),
+                new GameObjectRef(tilemapGo.GetInstanceID()),
                 anchor: new Vector3(0f, 0f, 0f),
                 orientation: Tool_Tilemap.TilemapOrientation.XY);
             Assert.IsTrue(orientResult.success, "SetOrientation should succeed");
             Assert.AreEqual(new Vector3(0f, 0f, 0f), tilemap.tileAnchor, "Anchor should be applied");
 
-            tool.SetTile(new GameObjectRef(tilemapGo.GetEntityId()), 0, 0, 0, TestTileAssetPath);
+            tool.SetTile(new GameObjectRef(tilemapGo.GetInstanceID()), 0, 0, 0, TestTileAssetPath);
             var flagsResult = tool.SetTileFlags(
-                new GameObjectRef(tilemapGo.GetEntityId()),
+                new GameObjectRef(tilemapGo.GetInstanceID()),
                 x: 0, y: 0, z: 0,
                 color: Color.red);
             Assert.IsTrue(flagsResult.success, "SetTileFlags should succeed");

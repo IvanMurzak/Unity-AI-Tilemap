@@ -6,7 +6,7 @@
 */
 
 #nullable enable
-#if UNITY_6000_5_OR_NEWER
+#if !UNITY_6000_5_OR_NEWER
 using System;
 using System.Collections;
 using com.IvanMurzak.ReflectorNet.Model;
@@ -28,8 +28,8 @@ namespace com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests
 
             var tool = new Tool_Tilemap();
             var result = tool.GetComponentData(
-                gameObjectRef: new GameObjectRef(tilemapGo.GetEntityId()),
-                componentRef: new ComponentRef(tilemap.GetEntityId()));
+                gameObjectRef: new GameObjectRef(tilemapGo.GetInstanceID()),
+                componentRef: new ComponentRef(tilemap.GetInstanceID()));
 
             Assert.IsNotNull(result, "Result should not be null");
             Assert.IsNotNull(result.data, "Serialized data should not be null");
@@ -44,7 +44,7 @@ namespace com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests
             var (_, tilemapGo, _) = CreateGridWithTilemap();
 
             var tool = new Tool_Tilemap();
-            var result = tool.GetComponentData(new GameObjectRef(tilemapGo.GetEntityId()));
+            var result = tool.GetComponentData(new GameObjectRef(tilemapGo.GetInstanceID()));
 
             Assert.IsNotNull(result.data, "Should serialize the first Tilemap-related component");
 
@@ -103,9 +103,9 @@ namespace com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests
 
             var tool = new Tool_Tilemap();
             var result = tool.ModifyComponent(
-                gameObjectRef: new GameObjectRef(gridGo.GetEntityId()),
+                gameObjectRef: new GameObjectRef(gridGo.GetInstanceID()),
                 data: diff,
-                componentRef: new ComponentRef(grid.GetEntityId()));
+                componentRef: new ComponentRef(grid.GetInstanceID()));
 
             Assert.IsTrue(result.success, "Modification should succeed");
             Assert.AreEqual(new Vector3(2f, 2f, 0f), grid.cellSize, "cellSize should be modified via the props channel");
