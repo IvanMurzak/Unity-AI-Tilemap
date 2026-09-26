@@ -39,7 +39,7 @@ namespace com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests
             var (_, tilemapGo, _) = CreateGridWithTilemap();
 
             var json = $@"{{
-                ""gameObjectRef"": {{ ""instanceID"": {tilemapGo.GetEntityId()} }},
+                ""gameObjectRef"": {{ ""instanceID"": ""{UnityEngine.EntityId.ToULong(tilemapGo.GetEntityId())}"" }},
                 ""orientation"": ""XY""
             }}";
 
