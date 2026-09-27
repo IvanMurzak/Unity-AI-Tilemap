@@ -1,2 +1,4 @@
 # Claude
 .claude
+# Local Unity/CLI run logs
+*.log
