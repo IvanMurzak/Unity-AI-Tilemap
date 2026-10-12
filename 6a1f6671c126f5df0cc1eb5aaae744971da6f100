@@ -1,0 +1,29 @@
+Unity-Package/Assets/root/Tests/Runtime/com.IvanMurzak.Unity.MCP.Tilemap.Tests.asmdef
+  s_6908d424636975::t_3829e4cc2da6aa 26-27
+Unity-Package/Assets/root/Tests/Editor/BaseTest.cs
+  s_6908d424636975::t_d765564ad3077b 1-65
+Unity-Package/Assets/root/Tests/Editor/TestTilemapLifecycle.cs
+  s_6908d424636975::t_68cfdcae7da58c 1-174
+Unity-Package/Assets/root/Tests/Editor/com.IvanMurzak.Unity.MCP.Tilemap.Editor.Tests.asmdef
+  s_6908d424636975::t_0793ba20202dca 9-13,29-30,34-35,39
+Unity-Package/Assets/root/Tests/Editor/TestTilemapGeneric.cs
+  s_6908d424636975::t_991d1972c04e30 1-115
+Unity-Package/Assets/root/Tests/Runtime/DemoTest.cs
+  s_6908d424636975::t_5e4efa7769ad22 4,6,24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "6a1f6671c126f5df0cc1eb5aaae744971da6f100",
+  "prompts": {},
+  "sessions": {
+    "s_6908d424636975": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "383d28d1-a361-40a7-9656-23c1b29d7a19",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}

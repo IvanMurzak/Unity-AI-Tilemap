@@ -1,0 +1,23 @@
+"Installer/Assets/com.IvanMurzak/AI Tilemap Installer/Installer.cs"
+  s_cb41aadbde3305::t_be6c776e23a48f 22
+Unity-Package/Packages/com.ivanmurzak.unity.mcp.tilemap/package.json
+  s_cb41aadbde3305::t_3f75876f4c02a3 19,23
+Unity-Package/Packages/packages-lock.json
+  s_cb41aadbde3305::t_723f4adf967ccf 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.12",
+  "base_commit_sha": "446a702ca3ca8056b7548d459249c6b1b4889d93",
+  "prompts": {},
+  "sessions": {
+    "s_cb41aadbde3305": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e52f295f-a887-4d28-a18e-567076052857",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}

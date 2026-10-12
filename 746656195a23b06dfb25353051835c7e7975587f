@@ -1,0 +1,21 @@
+.github/workflows/release.yml
+  s_bcaa8ef197c658::t_a04789d388e506 318-326,356-364,394-402,428-430
+.github/workflows/test_pull_request.yml
+  s_bcaa8ef197c658::t_636e7851430420 36-43,70-77,104-111
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "746656195a23b06dfb25353051835c7e7975587f",
+  "prompts": {},
+  "sessions": {
+    "s_bcaa8ef197c658": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_bcaa8ef197c658",
+        "model": "unknown"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}

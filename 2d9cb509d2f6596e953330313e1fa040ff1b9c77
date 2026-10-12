@@ -1,0 +1,25 @@
+Unity-Tests/2022.3.62f3/Packages/manifest.json
+  s_81612db472b68b::t_2c4890073ec611 44
+Unity-Tests/2023.2.22f1/Packages/manifest.json
+  s_81612db472b68b::t_103d4a818f60b2 47
+Unity-Tests/6000.3.1f1/Packages/manifest.json
+  s_81612db472b68b::t_ef364b3bc9a278 48
+Installer/Assets/Packages/manifest.json
+  s_81612db472b68b::t_f7d85f011c8a82 24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "2d9cb509d2f6596e953330313e1fa040ff1b9c77",
+  "prompts": {},
+  "sessions": {
+    "s_81612db472b68b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9552c2b2-b147-40ea-b391-1ce7ded0d7d7",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}

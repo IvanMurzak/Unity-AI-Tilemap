@@ -1,0 +1,29 @@
+"Installer/Assets/com.IvanMurzak/AI Tilemap Installer/Installer.cs"
+  s_ed1b4ae4e5d986::t_759bb3c6b223e7 22
+Unity-Package/Packages/com.ivanmurzak.unity.mcp.tilemap/package.json
+  s_ed1b4ae4e5d986::t_164bb5d36c7930 19,23
+Unity-Package/Packages/packages-lock.json
+  s_ed1b4ae4e5d986::t_5f919cb140efd8 4,19
+Unity-Tests/2022.3.62f3/Packages/packages-lock.json
+  s_ed1b4ae4e5d986::t_721fde6683cbac 4,19
+Unity-Tests/2023.2.22f1/Packages/packages-lock.json
+  s_ed1b4ae4e5d986::t_08bcbcba459ff6 4,19
+Unity-Tests/6000.3.1f1/Packages/packages-lock.json
+  s_ed1b4ae4e5d986::t_02eef8c8fad7c7 4,19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "62bc868f28e602085d61d496bd2ebcd924bc8708",
+  "prompts": {},
+  "sessions": {
+    "s_ed1b4ae4e5d986": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d065bda2-94f7-45db-b8f4-2da50c81020b",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}
