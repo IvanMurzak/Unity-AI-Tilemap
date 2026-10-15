@@ -124,7 +124,8 @@ namespace com.IvanMurzak.Unity.MCP.Editor.Rql.Tilemaps
             {
                 TilemapOps.ForEachTile(t, (cell, tile) =>
                 {
-                    if (cells.Count < MaxList && (match == null || match(tile))) cells.Add(TilemapOps.Format(cell));
+                    if (match == null || match(tile)) cells.Add(TilemapOps.Format(cell));
+                    return cells.Count < MaxList;
                 });
             }
             catch (ArgumentException ex) { return new RqlError("type-mismatch", "tilemap.cells: " + ex.Message); }

@@ -61,8 +61,11 @@ namespace com.IvanMurzak.Unity.MCP.Editor.Rql.Tilemaps
         /// <summary>Largest area scanned for reads (counts, used cells): 4096 × 4096 cells.</summary>
         public const int MaxScanCells = 1 << 24;
 
-        /// <summary>Visit every occupied cell inside <paramref name="area"/> (default: the tilemap's cellBounds), one slab of rows at a time.</summary>
-        public static void ForEachTile(Tilemap tilemap, Action<Vector3Int, TileBase> visit, BoundsInt? area = null)
+        /// <summary>
+        /// Visit every occupied cell inside <paramref name="area"/> (default: the tilemap's cellBounds), one slab of rows at a time,
+        /// until <paramref name="visit"/> returns false.
+        /// </summary>
+        public static void ForEachTile(Tilemap tilemap, Func<Vector3Int, TileBase, bool> visit, BoundsInt? area = null)
         {
             var b = area ?? tilemap.cellBounds;
             if (b.size.x <= 0 || b.size.y <= 0 || b.size.z <= 0) return;
@@ -78,7 +81,7 @@ namespace com.IvanMurzak.Unity.MCP.Editor.Rql.Tilemaps
                     int i = 0;
                     for (int y = 0; y < rows; y++)
                         for (int x = 0; x < b.size.x; x++, i++)
-                            if (tiles[i] != null) visit(new Vector3Int(b.xMin + x, y0 + y, z), tiles[i]);
+                            if (tiles[i] != null && !visit(new Vector3Int(b.xMin + x, y0 + y, z), tiles[i])) return;
                 }
             }
         }
@@ -86,7 +89,7 @@ namespace com.IvanMurzak.Unity.MCP.Editor.Rql.Tilemaps
         public static int CountTiles(Tilemap tilemap, Func<TileBase, bool>? match = null, BoundsInt? area = null)
         {
             int n = 0;
-            ForEachTile(tilemap, (_, t) => { if (match == null || match(t)) n++; }, area);
+            ForEachTile(tilemap, (_, t) => { if (match == null || match(t)) n++; return true; }, area);
             return n;
         }
 

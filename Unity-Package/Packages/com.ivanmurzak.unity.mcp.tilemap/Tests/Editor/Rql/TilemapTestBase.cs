@@ -105,7 +105,7 @@ namespace com.IvanMurzak.Unity.MCP.Editor.Tests.Rql.Tilemaps
             EnsureFolder();
             var tile = ScriptableObject.CreateInstance<Tile>();
             tile.name = name;
-            AssetDatabase.CreateAsset(tile, $"{Folder}/{name}.asset");
+            AssetDatabase.CreateAsset(tile, TilePath(name));
             return tile;
         }
 

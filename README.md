@@ -33,34 +33,25 @@ AI-powered tools for the Unity [Tilemap](https://docs.unity3d.com/Manual/class-T
 | 2023.2.22f1   | [![r](https://github.com/IvanMurzak/Unity-AI-Tilemap/workflows/release/badge.svg?job=test-unity-2023-2-22f1-editmode)](https://github.com/IvanMurzak/Unity-AI-Tilemap/actions/workflows/release.yml)       | [![r](https://github.com/IvanMurzak/Unity-AI-Tilemap/workflows/release/badge.svg?job=test-unity-2023-2-22f1-playmode)](https://github.com/IvanMurzak/Unity-AI-Tilemap/actions/workflows/release.yml)       | [![r](https://github.com/IvanMurzak/Unity-AI-Tilemap/workflows/release/badge.svg?job=test-unity-2023-2-22f1-standalone)](https://github.com/IvanMurzak/Unity-AI-Tilemap/actions/workflows/release.yml)       |
 | 6000.3.1f1    | [![r](https://github.com/IvanMurzak/Unity-AI-Tilemap/workflows/release/badge.svg?job=test-unity-6000-3-1f1-editmode)](https://github.com/IvanMurzak/Unity-AI-Tilemap/actions/workflows/release.yml)        | [![r](https://github.com/IvanMurzak/Unity-AI-Tilemap/workflows/release/badge.svg?job=test-unity-6000-3-1f1-playmode)](https://github.com/IvanMurzak/Unity-AI-Tilemap/actions/workflows/release.yml)        | [![r](https://github.com/IvanMurzak/Unity-AI-Tilemap/workflows/release/badge.svg?job=test-unity-6000-3-1f1-standalone)](https://github.com/IvanMurzak/Unity-AI-Tilemap/actions/workflows/release.yml)        |
 
-## AI Tilemap Tools
+## RQL (no extension tools)
 
-13 tools, grouped by purpose:
+Since 2.0.0 this package adds no MCP tools: it contributes an RQL module to [AI Game Developer](https://github.com/IvanMurzak/Unity-MCP)
+1.0.0, so agents use `rql-query` / `rql-mutate` (the `unity-rql` skill carries the full guide with examples).
+`T` below stands for `objects | get components | where $ is Tilemap`.
 
-### Tilemap lifecycle
-
-- `tilemap-create` - Create a `Grid` + `Tilemap` GameObject in the active scene
-- `tilemap-list` - List all `Tilemap`s in the active scene
-- `tilemap-get` - Get a `Tilemap` / `TilemapRenderer` component's data via ReflectorNet
-- `tilemap-set-orientation` - Set the tilemap's anchor and orientation
-
-### Painting
-
-- `tilemap-set-tile` - Set (paint) a tile at a cell position
-- `tilemap-box-fill` - Box-fill a rectangular region of cells with a tile
-- `tilemap-clear` - Clear all tiles from a tilemap
-- `tilemap-get-tile` - Read the tile at a cell position
-- `tilemap-set-tile-flags` - Set a tile's color and transform (flags) at a cell
-- `tilemap-set-collider-type` - Set a tile's collider type (None / Sprite / Grid) at a cell
-
-### Tile assets
-
-- `tilemap-create-tile-asset` - Create a `Tile` asset (from a sprite)
-- `tilemap-create-rule-tile` - Create a `RuleTile` asset (2D Tilemap Extras)
-
-### Generic
-
-- `tilemap-modify` - Generic write: apply a `SerializedMember` diff to any tilemap component via ReflectorNet (escape hatch for fields not covered by the dedicated tools)
+| Former tool | RQL |
+| --- | --- |
+| `tilemap-create` | `tilemap \| call CreateTilemap("Ground")` (optional parent, cellSize, gridName) |
+| `tilemap-list` / `tilemap-get` | `T \| select $ref gameObject.name tileCount usedTiles cellBounds orientation` |
+| `tilemap-set-orientation` / `tilemap-modify` | `T \| set orientation = "XZ", tileAnchor = "(0.5, 0.5, 0)"` (any member) |
+| `tilemap-set-tile` | `T \| call SetTile("(0, 0, 0)", "Assets/Tiles/Grass.asset")` (`SetTiles([...], tile)`, null erases) |
+| `tilemap-box-fill` | `T \| call BoxFill("Assets/Tiles/Grass.asset", -5, -3, 5, 3)` (`ClearBox`, `FloodFill`) |
+| `tilemap-clear` | `T \| call ClearAllTiles()` |
+| `tilemap-get-tile` | `T \| select c=(tilemap.cell($, "(0, 0, 0)"))` (`tilemap.tileAt`, `tilemap.tiles`, `tilemap.count`, `tilemap.cells`) |
+| `tilemap-set-tile-flags` | `T \| call SetColor("(0, 0, 0)", "#FF8080")`, `call SetTransform("(0, 0, 0)", 90)` |
+| `tilemap-set-collider-type` | `T \| call SetColliderType("(0, 0, 0)", "None")` |
+| `tilemap-create-tile-asset` | `tilemap \| call CreateTile("Assets/Tiles/Grass.asset", "Assets/Art/grass.png")` |
+| `tilemap-create-rule-tile` | `tilemap \| call CreateRuleTile("Assets/Tiles/Ground.asset")`, then `unity.asset(…) \| call AddRule(sprite, "NNN/T.T/TTT")` |
 
 ## Installation
 
