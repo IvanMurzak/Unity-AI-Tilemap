@@ -13,9 +13,10 @@ modify arbitrary tilemap component fields. An extension of
 - `Unity-Package/` — Unity project hosting the package; only `Packages/com.ivanmurzak.unity.mcp.tilemap/`
   ships.
   - `package.json` — the version source of truth and the dependency pins.
-  - `Editor/Scripts/Tools/` — the MCP tools (`Tool_Tilemap`); new tools go here.
+  - `Editor/Scripts/Rql/` — branch `experiment/rql`: the `TilemapModule` (IRqlModule: `tilemap` source, `tilemap.*`
+    functions, one adapter per file, the agent guide); replaces the former `tilemap-*` tools.
   - `Runtime/` — runtime assembly (currently empty).
-  - `Tests/Editor/` (EditMode, `BaseTest` + one file per tool group) and `Tests/Runtime/` (PlayMode).
+  - `Tests/Editor/Rql/` (EditMode, `TilemapTestBase` + one file per adapter / source) and `Tests/Runtime/` (PlayMode).
 - `Unity-Tests/<unity-version>/` — one test project per supported Unity version, consuming the package via
   `file:`. A new version must also be added to `test_pull_request.yml` and `release.yml` (and
   `open-all-projects-*`).
