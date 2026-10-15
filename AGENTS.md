@@ -13,7 +13,7 @@ RuleTile `AddRule` / `ClearRules` and the read-only `tilemap.*` cell functions. 
 - `Unity-Package/` — Unity project hosting the package; only `Packages/com.ivanmurzak.unity.mcp.tilemap/`
   ships.
   - `package.json` — the version source of truth and the dependency pins.
-  - `Editor/Scripts/Rql/` — branch `experiment/rql`: the `TilemapModule` (IRqlModule: `tilemap` source, `tilemap.*`
+  - `Editor/Scripts/Rql/` — the `TilemapModule` (IRqlModule: `tilemap` source, `tilemap.*`
     functions, one adapter per file, the agent guide); replaces the former `tilemap-*` tools.
   - `Runtime/` — runtime assembly (currently empty).
   - `Tests/Editor/Rql/` (EditMode, `TilemapTestBase` + one file per adapter / source) and `Tests/Runtime/` (PlayMode).
