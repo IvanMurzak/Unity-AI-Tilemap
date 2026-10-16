@@ -1,10 +1,10 @@
 # AGENTS.md — Unity-AI-Tilemap
 
 Unity package `com.ivanmurzak.unity.mcp.tilemap` — wraps Unity's built-in **Tilemap** module
-(`com.unity.modules.tilemap`) plus **2D Tilemap Extras** (`com.unity.2d.tilemap.extras`, for RuleTiles) as
-`tilemap-*` MCP tools: create `Grid` + `Tilemap` GameObjects, paint/clear/box-fill tiles, read tiles, create
-`Tile` and `RuleTile` assets, set per-cell flags and collider type, set orientation, list/get tilemaps, and
-modify arbitrary tilemap component fields. An extension of
+(`com.unity.modules.tilemap`) plus **2D Tilemap Extras** (`com.unity.2d.tilemap.extras`, for RuleTiles) available
+to Unity-MCP's RQL tools (`rql-query` / `rql-mutate`; no extension MCP tools): the `tilemap` source
+(`CreateTilemap`, `CreateTile`, `CreateRuleTile`), Tilemap painting methods (SetTile, BoxFill, FloodFill, …),
+RuleTile `AddRule` / `ClearRules` and the read-only `tilemap.*` cell functions. An extension of
 [AI Game Developer](https://github.com/IvanMurzak/Unity-MCP) (`com.ivanmurzak.unity.mcp`), generated from
 `Unity-AI-Tools-Template`; the user-facing tool list is in `README.md`.
 
@@ -13,9 +13,10 @@ modify arbitrary tilemap component fields. An extension of
 - `Unity-Package/` — Unity project hosting the package; only `Packages/com.ivanmurzak.unity.mcp.tilemap/`
   ships.
   - `package.json` — the version source of truth and the dependency pins.
-  - `Editor/Scripts/Tools/` — the MCP tools (`Tool_Tilemap`); new tools go here.
+  - `Editor/Scripts/Rql/` — the `TilemapModule` (IRqlModule: `tilemap` source, `tilemap.*`
+    functions, one adapter per file, the agent guide); replaces the former `tilemap-*` tools.
   - `Runtime/` — runtime assembly (currently empty).
-  - `Tests/Editor/` (EditMode, `BaseTest` + one file per tool group) and `Tests/Runtime/` (PlayMode).
+  - `Tests/Editor/Rql/` (EditMode, `TilemapTestBase` + one file per adapter / source) and `Tests/Runtime/` (PlayMode).
 - `Unity-Tests/<unity-version>/` — one test project per supported Unity version, consuming the package via
   `file:`. A new version must also be added to `test_pull_request.yml` and `release.yml` (and
   `open-all-projects-*`).
@@ -45,21 +46,11 @@ maintainer-applied `ci-ok` label and abort if the PR touches `.github/workflows/
 
 ## Critical invariants
 
-- **Main thread only.** Every Unity API call inside a tool MUST be wrapped in
-  `MainThread.Instance.Run(() => { ... })` — MCP calls arrive off the main thread; only argument validation
-  runs outside. So must ReflectorNet calls (`reflector.Serialize`, `TryModify`).
-- **Tool shape.** One `[AiToolType] partial class Tool_Tilemap`, split one operation per file
-  (`Tilemap.Create.cs`, `Tilemap.SetTile.cs`, `Tilemap.Modify.cs`, …). Each tool method carries
-  `[AiTool(<id>, Title=…, …Hint=…)]`, `[AiSkillDescription]` / `[AiSkillBody]` and `[Description]` (all
-  LLM-facing); tool IDs are `public const string …ToolId = "tilemap-…"`. Shared helpers (`ResolveTilemap`,
-  `ResolveTileAsset`, `MarkDirtyAndRepaint`) live in `Tilemap.Helpers.cs`; error strings in
-  `Tool_Tilemap.Error` (`Tilemap.cs`).
-- **EntityId split.** Unity 6.5+ returns `UnityEngine.EntityId` from `GameObject.GetEntityId()`; pre-6.5
-  returns `int` from `GetInstanceID()`. Files surfacing an instance ID ship as a `*.cs`
-  (`#if UNITY_6000_5_OR_NEWER`) + `*.pre-Unity.6.5.cs` (`#if !UNITY_6000_5_OR_NEWER`) pair — e.g.
-  `Tilemap.Create.cs` / `Tilemap.Create.pre-Unity.6.5.cs`. Keep both variants in sync.
-- **Generic modify via ReflectorNet.** `tilemap-modify` applies a `SerializedMember` diff through
-  `reflector.TryModify(ref boxed, data, …)`. The `fields` channel resolves `FieldInfo` and `props` resolves
-  `PropertyInfo`, with **no cross-fallback**: a public field MUST go in `fields`, a property in `props`
-  (otherwise: `Property '…' not found or not writable`).
+- **RQL surface.** Everything is registered by `TilemapModule` (`IRqlModule`, Order 100, found through
+  TypeCache) and documented in its `AddGuide("Tilemap", …)` text, which is rendered into the `unity-rql` skill:
+  keep the guide examples in sync with the adapters and functions.
+- **Undo.** Every tile write records the whole Tilemap first (`TilemapOps.Record`); created assets are not undone.
+- **Limits.** Writes are capped at `TilemapOps.MaxCells` cells per call, scans at `MaxScanCells`; function
+  results at `TilemapFunctions.MaxList` items (RQL truncates longer lists). Function errors are returned as
+  `RqlError`, not thrown.
 - Every C# file starts with the copyright box header and `#nullable enable`.
